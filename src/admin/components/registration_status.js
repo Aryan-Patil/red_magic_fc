@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { storage } from '../firebase';
 import { deleteObject, getDownloadURL, listAll, ref, uploadBytes } from 'firebase/storage';
+import AboutUs from './aboutus';
 
 
 
@@ -70,6 +71,10 @@ export default function Registration_status() {
     }; registrationStatus();
   }, []);
 
+
+
+  
+
   console.log(registration);
   console.log(registrationId);
 
@@ -77,7 +82,7 @@ export default function Registration_status() {
     <div>
       <div className="registration-heading">Admission Enquiry</div>
       <table class="table">
-        <thead>
+      <thead>
           <tr>
             <th scope="col">Name</th>
             <th scope="col">Contact no.</th>
@@ -127,9 +132,9 @@ export default function Registration_status() {
             })
           }
         </div>
-
+        
       </div>
-
+      <AboutUs />
 
     </div>
 

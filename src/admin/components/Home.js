@@ -3,6 +3,8 @@ import './home.css'
 import Adminheader from "./admin-header";
 import Registration_status from "./registration_status";
 import Sponsors from "./sponsors";
+import Info from "./info";
+
 
 function Home(props) {
   return (
@@ -13,6 +15,7 @@ function Home(props) {
       </div>
       <Registration_status />
       <Sponsors />
+      <Info />
     </div>
   );
 }
