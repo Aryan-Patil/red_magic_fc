@@ -1,0 +1,15 @@
+.admin-header{
+    padding-left: 10px;
+    position: absolute;
+    width: 100%;
+    background-color: rgb(59, 134, 200);
+    height: 50px;
+    top: 0;
+}
+.admin-header-info{
+    margin-top: 10px;
+    margin-left: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}

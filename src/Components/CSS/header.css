@@ -1,0 +1,35 @@
+.header{
+    background-color: rgba(0, 0, 0,0.48);
+    top: 20px;
+    font-size: xx-large;
+    display: flex;
+    padding: 20px;
+    left: 75px;
+    width: 78%;
+    border-radius: 10px;
+    padding-left: 100px;
+    z-index: 100;
+    position: absolute;
+}
+
+.logo{
+    position: absolute;
+    width: 150px;
+    left: -45px;
+    top: -20px;
+}
+.header_text{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    margin-right: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.header_text:hover{
+    background-color: rgb(160, 0, 0);
+    color: white;
+}

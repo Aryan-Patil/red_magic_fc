@@ -1,0 +1,20 @@
+.news{
+
+    margin-left: 60px;
+    align-items: center;
+}
+.card-news{
+    text-align: center;
+    margin: 20px;
+    width: 430px;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+.news-main{
+    text-align: center;
+    margin-top: 150px;
+}
+.news-main h1{
+    font-size: 60px;
+    font-weight: 800;
+}
