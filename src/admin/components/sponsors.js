@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { storage } from '../firebase';
 import { deleteObject, getDownloadURL, listAll, ref, uploadBytes } from 'firebase/storage';
+import Homeinfo from './home-info';
+import Adminheader from './admin-header';
 export default function Sponsors() {
 
     const [uploadImg, setuploadImg] = useState(null);
@@ -44,10 +46,17 @@ export default function Sponsors() {
 
   return (
     <div className="special-features">
+        <Adminheader />
+        <br />
+        <br />
     <h1>Sponsors</h1>
+<br />
+    <h4>Add Sponsors</h4>
     <input type="file" onChange={(e) => setuploadImg(e.target.files[0])} name="" id="" />
     <button onClick={uploadImage} className="uplaod-img">Upload Image</button>
-
+<br />
+<br />
+<h4>View Sponsors</h4>
     <div className="">
       {imageListUrl.map((item) => {
         return (
@@ -56,15 +65,20 @@ export default function Sponsors() {
           </>
         );
       })}
+      <br />
+      <br />
       {
         listallimg.map((item) => {
           return(<>
-          <button onClick={() => deleteimg(item)} >delete </button>
+          <button className='mar0-img' onClick={() => deleteimg(item)} >delete </button>
           </>);
         })
       }
     </div>
-
+    <br />
+    <br />
+    <br />
+    <Homeinfo />
   </div>
   )
 }

@@ -7,6 +7,7 @@ import { addDoc } from "@firebase/firestore";
 import { orderBy } from '@firebase/firestore';
 import { query, set } from 'firebase/database';
 import Playerinfo from './playerinfo';
+import Adminheader from './admin-header';
 export default function Info() {
 
     const [team,setTeam] = useState('');
@@ -54,13 +55,26 @@ export default function Info() {
       
   return (
     <div className='info'>
+        <Adminheader />
         <Playerinfo />
+        <div className="match-form">
+        <br />
+        <h1>Match Information</h1>
+        <br />
+        <br />
+        <h3>Add match data</h3>
+        Team:
         <input type="text" onChange={(e) => setTeam(e.target.value)} value={team} />
+        <br />
+        Date:
         <input type="datetime-local" id="birthdaytime" name="birthdaytime"onChange={(e) => setDate(e.target.value)} ></input>
+        <br />
+        Place:
         <input type="text" onChange={(e) => setPlace(e.target.value)} value={place} />
+    <br />
         <button onClick={handleSubmit}>Submit</button>
-
-        <table>
+        </div>
+        <table className='table table-striped table-dark reg-tab'>
         <tr>
     <th>Team</th>
     <th>Address</th>

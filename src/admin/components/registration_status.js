@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { storage } from '../firebase';
 import { deleteObject, getDownloadURL, listAll, ref, uploadBytes } from 'firebase/storage';
-import AboutUs from './aboutus';
+import Adminheader from './admin-header';
 
 
 
@@ -80,6 +80,7 @@ export default function Registration_status() {
 
   return (
     <div>
+      <Adminheader />
       <div className="registration-heading">Admission Enquiry</div>
       <table class="table">
       <thead>
@@ -111,30 +112,8 @@ export default function Registration_status() {
 
 
 
-      <div className="special-features">
-        <h1>Special Offers</h1>
-        <input type="file" onChange={(e) => setuploadImg(e.target.files[0])} name="" id="" />
-        <button onClick={uploadImage} className="uplaod-img">Upload Image</button>
-
-        <div className="">
-          {imageListUrl.map((item) => {
-            return (
-              <>
-                <img className='feature-image' src={item} alt="" srcset="" />
-              </>
-            );
-          })}
-          {
-            listallimg.map((item) => {
-              return(<>
-              <button onClick={() => deleteimg(item)} >delete </button>
-              </>);
-            })
-          }
-        </div>
-        
-      </div>
-      <AboutUs />
+     
+      
 
     </div>
 

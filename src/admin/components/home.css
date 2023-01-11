@@ -21,6 +21,18 @@
 .info{
     margin-top: 50px;
 }
+.mar0-img{
+    margin-left: 120px;
+    margin-right: 120px;
+}
+.player-form{
+    padding: 30px;
+    margin: 30px;
+    margin-left: 470px;
+    margin-right: 200px;
+}
 
-
-
+.match-form{
+    margin-left: 500px;
+    margin-right: 200px;
+}
